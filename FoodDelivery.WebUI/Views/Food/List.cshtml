@@ -1,0 +1,17 @@
+﻿@using FoodDelivery.WebUI.Models
+@using FoodDelivery.WebUI.HtmlHelpers
+@model FoodsListViewModel
+
+@{
+	ViewBag.Title = "Еда";
+}
+
+@foreach (var p in @Model.Foods)
+{
+	@Html.Partial("FoodSummary", p)
+}
+
+<div class="btn-group pull-right">
+	@Html.PageLinks(Model.PagingInfo, x => Url.Action("List",
+		new { page = x, category = Model.CurrentCategory }))
+</div>

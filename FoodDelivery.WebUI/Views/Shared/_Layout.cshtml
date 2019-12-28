@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="~/Content/bootstrap.css" rel="stylesheet" />
+	<link href="~/Content/mystyle.css" rel="stylesheet" />
+	<link href="~/Content/ErrorStyles.css" rel="stylesheet" />
+	<title>@ViewBag.Title</title>
+</head>
+<body>
+	<div class="navbar navbar-default" role="navigation">
+		<a class="navbar-brand" href="#">FoodDelivery - вкусно везде!</a>
+		@Html.Action("LoginNav", "Account")
+		@Html.Action("Summary", "Cart")
+	</div>
+	<div style="align-content:center">
+		<div class="carousel-inner" role="listbox" style="margin-left:25px;">
+
+			<div class="item active">
+				<img style="max-width:1300px; max-height:170px; align-content:center;" src="~/Content/fast.jpg" alt="Welcome">
+				<div class="carousel-caption" style="align-content:center;">
+					<h2 style="color:black; margin-bottom:30px; margin-left: 50px;">Доставка вкуснейшей еды по вкуснейшим ценам!</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row panel">
+		<div id="categories" class="col-xs-2">
+			@Html.Action("Menu", "Nav")
+		</div>
+		<div class="col-xs-9">
+			@RenderBody()
+		</div>
+	</div>
+</body>
+</html>

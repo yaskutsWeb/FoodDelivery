@@ -1,0 +1,13 @@
+﻿@model FoodDelivery.Domain.Entities.Cart
+
+<div class="navbar-right p-3 m3" id="buy_korz">
+	@Html.ActionLink("Заказать", "Index", "Cart",
+	new { returnUrl = Request.Url.PathAndQuery },
+	new { @class = "btn btn-default navbar-btn btn-success" })
+</div>
+
+<div class="navbar-text navbar-right p-3 m3">
+	<b>Корзина:</b>
+	@Model.Lines.Sum(x => x.Quantity) единиц,
+	@Model.ComputeTotalValue().ToString("# руб")
+</div>

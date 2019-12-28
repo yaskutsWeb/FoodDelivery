@@ -1,0 +1,26 @@
+﻿@model FoodDelivery.Domain.Entities.Food
+
+<div class="well">
+	@if (Model.ImageData != null)
+	{
+		<div class="pull-left" style="margin-right: 10px">
+			<img class="img-thumbnail" width="110" height="110"
+				 src="@Url.Action("GetImage", "Food",
+                new { Model.FoodId })" />
+		</div>
+	}
+
+	<h3>
+		<strong>@Model.Name</strong>
+		<span class="pull-right label label-primary">@Model.Price.ToString("# руб")</span>
+	</h3>
+	@using (Html.BeginForm("AddToCart", "Cart"))
+	{
+		<div class="pull-right">
+			@Html.HiddenFor(x => x.FoodId)
+			@Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+			<input type="submit" class="btn btn-success" value="Добавить в корзину" />
+		</div>
+	}
+	<span class="lead">@Model.Description</span>
+</div>

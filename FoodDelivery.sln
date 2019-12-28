@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDelivery.Domain", "FoodDelivery.Domain\FoodDelivery.Domain.csproj", "{138FA946-35E4-4B7A-A29C-E34391364B85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodDelivery.WebUI", "FoodDelivery.WebUI\FoodDelivery.WebUI.csproj", "{1B358989-ED94-4090-95E8-BCBB13003A26}"
+	ProjectSection(ProjectDependencies) = postProject
+		{138FA946-35E4-4B7A-A29C-E34391364B85} = {138FA946-35E4-4B7A-A29C-E34391364B85}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{138FA946-35E4-4B7A-A29C-E34391364B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{138FA946-35E4-4B7A-A29C-E34391364B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{138FA946-35E4-4B7A-A29C-E34391364B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{138FA946-35E4-4B7A-A29C-E34391364B85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B358989-ED94-4090-95E8-BCBB13003A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B358989-ED94-4090-95E8-BCBB13003A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B358989-ED94-4090-95E8-BCBB13003A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B358989-ED94-4090-95E8-BCBB13003A26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {11CBC105-9DA5-4892-9B14-1B80E940C1E4}
+	EndGlobalSection
+EndGlobal
